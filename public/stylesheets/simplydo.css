@@ -94,6 +94,11 @@ p.title {
   margin: 0px 0px 0px 1.5em;
 }
 
+#closedToDos p.title {
+  color: #AAA;
+  text-decoration: line-through;
+}
+
 
 #toDoLists {
 	float:left;
