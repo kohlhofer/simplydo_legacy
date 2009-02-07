@@ -2,6 +2,7 @@
 	http://localhost:3000/stylesheets/simplydo.css?1234010634
 	http://localhost:3000/stylesheets/simplydo.css?1234014440
 	http://localhost:3000/stylesheets/simplydo.css?1234029793
+	http://localhost:3000/stylesheets/simplydo.css?1234032769
 */
 
 body {
@@ -42,6 +43,27 @@ a {
 	-webkit-border-top-left-radius: 5px;
 	-moz-border-radius-topright: 5px;
 	-webkit-border-top-right-radius: 5px;
+}
+
+#navigation {
+  text-align: right;
+  background-color: #FFF;
+  padding: 0.5em 0.8em;
+  margin: 0px;
+			-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;  
+}
+
+#navigation span {
+  float: left;
+  font-weight: bold;
+  color: #78a700;
+}
+
+#navigation a {
+  margin-left: 1em;
 }
 
 #toDos ul {
