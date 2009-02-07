@@ -3,5 +3,11 @@ body {
   font-size: 0.9em;
   margin:0px;
   padding:0px;
-  background-color: #FFF;
+  background-color: #EEE;
+}
+
+#wrap {
+	width:740px;
+	margin:0px auto;
+	background-color:#FFF;
 }
