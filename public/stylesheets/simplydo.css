@@ -1,6 +1,7 @@
 /* @override 
 	http://localhost:3000/stylesheets/simplydo.css?1234010634
 	http://localhost:3000/stylesheets/simplydo.css?1234014440
+	http://localhost:3000/stylesheets/simplydo.css?1234029793
 */
 
 body {
@@ -83,6 +84,14 @@ input#todo_title {
 #toDos li {
 	padding:0.5em 1em;
 	font-size: 1.2em;
+}
+
+.tickBox {
+	float: left;
+}
+
+p.title {
+  margin: 0px 0px 0px 1.5em;
 }
 
 
