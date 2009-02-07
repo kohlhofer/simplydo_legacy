@@ -1,0 +1,17 @@
+<% content_for(:menu) do %>
+  <ul>
+    <% @todo_lists.each do |todo_list| %>
+      <li><%= todo_list.name %>
+    <% end %>
+  </ul>
+<% end %>
+
+<ul>
+  <% if @todos.size == 0 %>
+    List empty!
+  <% else  %>
+    <% @todos.each do |todo| %>
+      <li><%= todo.title %></li>
+    <% end %>
+  <% end %>
+</ul>
