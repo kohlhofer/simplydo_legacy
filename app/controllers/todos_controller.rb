@@ -8,7 +8,8 @@ class TodosController < ApplicationController
 
   def show
     @todo_lists = TodoList.find(:all, :order => 'name ASC')
-    @todos = Todo.find_by_list(@todo_lists.first)
+    @todo_list = @todo_lists.first
+    @todos = Todo.find_by_list(@todo_list)
   end
 
   def list
