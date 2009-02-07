@@ -1,5 +1,5 @@
 <div id="toDoLists">
-  <h2>Your To-Do lists:</h2>
+  <h2>Your Lists:</h2>
   <ul>
     <% @todo_lists.each do |todo_list| %>
       <li<%= (@todo_list.id == todo_list.id) ? ' class="current"' : '' %>><%= link_to(todo_list.name, todolist_path(todo_list)) %></li>

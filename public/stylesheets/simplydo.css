@@ -112,9 +112,14 @@ input#todo_title {
 }
 
 #toDos li {
-	padding:0.5em 1em;
+	padding:0.5em 1.5em;
 	font-size: 1.2em;
 	clear: left;
+	  background: transparent url(../images/dragUpDown.png) no-repeat 10px 10px;
+}
+
+#toDos #closedToDos li {
+	  background: none
 }
 
 .tickBox {
@@ -161,6 +166,7 @@ p.title {
 	float: left;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
+	text-decoration: none;
 }
 
 #toDoLists li.current a, #toDoLists li.current a:hover {
