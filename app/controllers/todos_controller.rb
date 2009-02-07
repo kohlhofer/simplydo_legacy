@@ -1,9 +1,7 @@
 require 'app/controllers/application.rb'
 
 class TodosController < ApplicationController
-
   
-
   def index
     show
   end

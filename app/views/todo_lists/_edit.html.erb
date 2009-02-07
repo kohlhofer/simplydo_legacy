@@ -1,0 +1,7 @@
+<%= error_messages_for 'todo_list' %>
+
+<% remote_form_for(@todo_list) do |f| %>
+    <%= f.text_field(:name) %>
+    <%= f.submit('save') %>
+    <%= link_to_remote('cancel', :update => 'add_todo_list', :url => { :controller => 'todo_lists', :action => 'cancel'}) %>
+<% end %>

@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resource :todos
+  map.resources :todo_lists
 
   # The priority is based upon order of creation: first created -> highest priority.
 
