@@ -1,2 +1,2 @@
 # TODO Operate on the page object
-page.replace('toDoLists', :partial => 'todo_lists/todo_lists', :object => @todo_lists)
+page.redirect_to(todolist_path(@todo_list))
