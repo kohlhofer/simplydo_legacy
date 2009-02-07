@@ -1,1 +1,1 @@
-<li id="add_todo_list"><%= link_to_remote('add list', :update => 'add_todo_list', :url => {:controller => 'todo_lists', :action => 'new'}) %></li>
+<p id="add_todo_list"><%= link_to_remote('Create a new List', :update => 'add_todo_list', :url => {:controller => 'todo_lists', :action => 'new'},:html => {:id => 'addListLink'}) %></p>
