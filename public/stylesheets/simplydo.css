@@ -10,4 +10,29 @@ body {
 	width:740px;
 	margin:0px auto;
 	background-color:#FFF;
+
+}
+
+#listInterface {
+		position:relative;
+		margin-top:3em;
+}
+
+#toDos {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:500px;
+	overflow:auto;
+	background-color:#AAA;
+}
+
+
+#toDoLists {
+	position:absolute;
+	top:0px;
+	left:520px;
+	width:240px;
+	overflow:auto;
+	background-color:#AAA;
 }
