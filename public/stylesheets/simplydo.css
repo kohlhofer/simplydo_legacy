@@ -37,7 +37,7 @@ a {
 
 #toDoLists {
 	float:left;
-	width:200px;
+	width:180px;
 	margin-left:20px;
 }
 
@@ -48,7 +48,7 @@ a {
 
 #toDoLists ul {
 	list-style: none;
-	margin: 0px 0px 1.5em 0px;
+	margin: 0px 0px 1em 0px;
 	padding: 0px;
 }
 
@@ -61,10 +61,21 @@ a {
 	background-color: #edf5ff;
 }
 
+form#new_todo_list {
+  margin: 0px;
+  padding: 0px;
+}
+
 input#todo_list_name {
-  	width: 10em;
-  	font-size: 1.1em;
+  	width: 175px;
+  	font-size: 1em;
   	padding: 0.2em;
+}
+
+#toDoLists button {
+  	font-size: 1.1em;
+  	padding: 0.2em 0.3em;
+  	margin-right: 1em;
 }
 
 #addListLink {
