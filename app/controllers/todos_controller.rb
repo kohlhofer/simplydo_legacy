@@ -42,4 +42,9 @@ class TodosController < ApplicationController
     @todo.update_attribute('done', 1)
   end
 
+  def reopen
+    @todo = Todo.find(params[:id])
+    @todo.update_attribute('done', 0)
+  end
+
 end

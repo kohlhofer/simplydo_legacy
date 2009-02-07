@@ -1,4 +1,4 @@
-# TODO Operate on the page object
+#page.
 page.hide('noOpenToDos')
 page.insert_html :top, 'openToDos', :partial => 'todo', :object => @todo
 page.visual_effect :highlight, "todo#{@todo.id}", :duration => 1
