@@ -36,10 +36,10 @@
   <div id="toDoLists">
     <ul>
       <% @todo_lists.each do |todo_list| %>
-        <li><%= todo_list.name %>
+        <li><%= todo_list.name %></li>
       <% end %>
-      <%= render :partial => 'todo_lists/add_todo_list' %>
     </ul>
+    <%= render :partial => 'todo_lists/add_todo_list' %>
   </div>
   
   
