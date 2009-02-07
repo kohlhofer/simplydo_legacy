@@ -4,6 +4,7 @@
 	http://localhost:3000/stylesheets/simplydo.css?1234029793
 	http://localhost:3000/stylesheets/simplydo.css?1234032769
 	http://localhost:3000/stylesheets/simplydo.css?1234032853
+	http://localhost:3000/stylesheets/simplydo.css?1234036039
 */
 
 body {
@@ -122,6 +123,26 @@ input#todo_title {
 	  background: none
 }
 
+a.deleteToDo {
+  margin-left: 0.5em;
+  padding:0.2em 0.3em 0.1em;
+  font-size: 0.7em;
+  color: #FFF;
+  	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	background-color: #DDD;
+	text-transform: uppercase;
+  vertical-align: 0.1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.deleteToDo:hover {
+
+	background-color: #F00;
+
+}
+
 .tickBox {
 	float: left;
 }
@@ -132,7 +153,6 @@ p.title {
 
 #closedToDos p.title {
   color: #AAA;
-  text-decoration: line-through;
 }
 
 
