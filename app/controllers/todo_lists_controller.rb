@@ -16,9 +16,9 @@ class TodoListsController < ApplicationController
     @todo_list = TodoList.new(params[:todo_list])
 
     if @todo_list.save!
-      
+      @todo_lists = TodoList.find(:all, :order => 'name ASC')
+      flash[:notice] = 'todolist saved'
     else
-      flash[:notice] = 'must provide a title'
       render :partial => 'edit'
     end
   end

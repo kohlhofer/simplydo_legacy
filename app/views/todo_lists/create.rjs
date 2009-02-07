@@ -1,2 +1,2 @@
 # TODO Operate on the page object
-page
+page.replace('toDoLists', :partial => 'todo_lists/todo_lists', :object => @todo_lists)

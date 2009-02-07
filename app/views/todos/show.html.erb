@@ -17,7 +17,7 @@
         </ul>
       <% end %>
     </div>
-    
+
     <div id="closedToDos">
       <% if @todos.size == 0 %>
         <p class="noToDos">Nothing done yet :(</p>
@@ -29,19 +29,13 @@
         </ul>
       <% end %>
     </div>
-    
-    
+
+
   </div>
-  
-  <div id="toDoLists">
-    <ul>
-      <% @todo_lists.each do |todo_list| %>
-        <li><%= todo_list.name %>
-      <% end %>
-      <%= render :partial => 'todo_lists/add_todo_list' %>
-    </ul>
-  </div>
-  
-  
+
+
+  <%= render :partial => 'todo_lists/todo_lists' %>
+
+
   <div class="clearThis"> </div>
 </div>
