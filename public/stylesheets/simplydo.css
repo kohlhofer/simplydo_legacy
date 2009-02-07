@@ -35,6 +35,13 @@ a {
 	min-height: 400px;
 }
 
+#toDos h1 {
+	margin:0px;
+	font-size: 1.2em;
+	padding: 1em 1em 0.6em 1em;
+	background-color: #b2ce00;
+}
+
 
 #toDoLists {
 	float:left;

@@ -4,7 +4,7 @@
 <div id="listInterface">
   
   <div id="toDos">
-    
+  <h1><%= @page_title = @todo_list.name %></h1>
     <div id="openToDos">
       <% if @todos.size == 0 %>
         <p class="noToDos">Yay! No open To-Dos.</p>
