@@ -3,6 +3,7 @@
     <% @todo_lists.each do |todo_list| %>
       <li><%= todo_list.name %>
     <% end %>
+    <li id="add_todo_list"><%= link_to_remote('add list', :update => 'add_todo_list', :url => {:controller => 'todo_lists', :action => 'new'}) %></li>
   </ul>
 <% end %>
 
