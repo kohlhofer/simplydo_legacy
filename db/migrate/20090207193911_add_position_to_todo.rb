@@ -1,9 +1,9 @@
 class AddPositionToTodo < ActiveRecord::Migration
   def self.up
-    add_column :todos, :postion, :integer
+    add_column :todos, :position, :integer
   end
 
   def self.down
-    remove_column :todos, :postion
+    remove_column :todos, :position
   end
 end
