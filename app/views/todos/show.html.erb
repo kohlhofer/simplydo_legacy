@@ -4,7 +4,7 @@
     <h1><%= @page_title = @todo_list.name %></h1>
     <%= render :partial => 'todos/add' %>
     <% if @open_todos.size == 0 %>
-      <p class="noToDos" id="noOpenToDos">Yay! No open To-Dos.</p>
+      <p class="noToDos" id="noOpenToDos">Yay - No open To-Dos on this list!</p>
     <% end  %>
     <ul id="openToDos">
       <% @open_todos.each do |todo| %>
@@ -13,15 +13,11 @@
     </ul>
     
     <div id="closedToDosContainer">
-      <% if @closed_todos.size == 0 %>
-        <p class="noToDos">Nothing done yet :(</p>
-      <% else  %>
         <ul id="closedToDos">
           <% @closed_todos.each do |todo| %>
             <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
           <% end %>
         </ul>
-      <% end %>
     </div>
 
     <% unless @todo_list.nil? %>
