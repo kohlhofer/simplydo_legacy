@@ -34,7 +34,6 @@ a {
 	float:left;
 	width:500px;
 	background-color:#FFF;
-	min-height: 400px;
 }
 
 #toDos h1 {
@@ -64,16 +63,10 @@ a {
 }
 
 #listOptions {
-	padding: 0.8em 1.5em;
+	padding: 0.8em 0px 0px 0px;
 	text-align: right;
 	font-size: 0.9em;
-	background-color: #ddd;
-	border-top: 1px solid #cecece;
-	-moz-border-radius-bottomleft: 3px;
-	-webkit-border-bottom-left-radius: 3px;
-	-moz-border-radius-bottomright: 3px;
-	-webkit-border-bottom-right-radius: 3px;
-  
+  	background-color: #eee;
 }
 
 input#todo_title {
@@ -167,7 +160,7 @@ input#todo_list_name {
 .noToDos {
 	font-size:1.3em;
 	text-align:center;
-	padding:2.5em 0px;
+	padding:2em 0px;
 	font-weight:bold;
 	color:#DDD;
 }
