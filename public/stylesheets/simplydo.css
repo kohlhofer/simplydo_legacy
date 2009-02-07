@@ -3,11 +3,52 @@ body {
   font-size: 0.9em;
   margin:0px;
   padding:0px;
-  background-color: #EEE;
+  background-color: #DDD;
 }
 
 #wrap {
 	width:740px;
 	margin:0px auto;
+
+}
+
+#listInterface {
+		position:relative;
+		margin-top:3em;
+		background-color:#EEE;
+		padding:10px;
+}
+
+#toDos {
+	float:left;
+	width:500px;
 	background-color:#FFF;
+}
+
+
+#toDoLists {
+	float:left;
+	width:210px;
+	margin-left:10px;
+
+}
+
+.noToDos {
+	font-size:2em;
+	text-align:center;
+	padding:3m 0px;
+	font-weight:bold;
+	color:#CCC;
+}
+
+#closedToDos {
+	border-top:3px dashed #DDD;
+}
+
+
+.clearThis {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  height: 1px;
 }
