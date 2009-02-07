@@ -3,9 +3,6 @@
   <div id="toDos">
     <h1><%= @page_title = @todo_list.name unless @todo_list.nil? %></h1>
     <%= render :partial => 'todos/add' %>
-    <% if @open_todos.size == 0 %>
-      <p class="noToDos" id="noOpenToDos">Yay - No open To-Dos on this list!</p>
-    <% end  %>
     <ul id="openToDos">
       <% @open_todos.each do |todo| %>
         <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
