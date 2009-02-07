@@ -8,8 +8,6 @@
     <div id="openToDosList">
     <%= render :partial => 'todos/open_todos' %>
     </div>
-    
-    <%= sortable_element('openToDos', :update => 'openToDosList', :url => {:controller => :todos, :action => :update_positions}) %>
 
     <div id="closedToDosContainer">
         <ul id="closedToDos">
