@@ -37,4 +37,9 @@ class TodosController < ApplicationController
     end
   end
 
+  def close
+    @todo = Todo.find(params[:id])
+    @todo.update_attribute('done', 1)
+  end
+
 end

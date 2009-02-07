@@ -1,1 +1,4 @@
-<li><%= todo.title %></li>
+<li id="<%= "todo#{todo.id}" %>">
+  <%= todo.title %>
+  <%= check_box('delete', '', :onclick => remote_function( :url => { :action => "close", :id => todo.id })) %>
+</li>

@@ -1,0 +1,5 @@
+# TODO Operate on the page object
+#page.visual_effect :highlight, "todo#{@todo.id}", :duration => 2
+page.remove "todo#{@todo.id}"
+page.insert_html :top, 'closedToDos', :partial => 'todo', :object => @todo
+page.visual_effect :highlight, "todo#{@todo.id}", :duration => 1
