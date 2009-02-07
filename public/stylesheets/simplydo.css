@@ -41,6 +41,11 @@ a {
 	margin-left:20px;
 }
 
+#toDoLists h2 {
+	margin: 0px 0px 0.5em 0px;
+	font-size: 1em;
+}
+
 #toDoLists ul {
 	list-style: none;
 	margin: 0px 0px 1.5em 0px;
@@ -50,6 +55,16 @@ a {
 #toDoLists ul a {
 	display: block;
 	padding: 0.3em 0px;
+}
+
+#toDoLists ul a:hover {
+	background-color: #edf5ff;
+}
+
+input#todo_list_name {
+  	width: 10em;
+  	font-size: 1.1em;
+  	padding: 0.2em;
 }
 
 #addListLink {

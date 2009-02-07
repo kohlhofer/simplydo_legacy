@@ -1,8 +1,9 @@
 <div id="toDoLists">
-<ul>
-  <% @todo_lists.each do |todo_list| %>
-    <li><a href="#"><%= todo_list.name %></a></li>
-  <% end %>
-</ul>
-<%= render :partial => 'todo_lists/add_todo_list' %>
+  <h2>Your to-do lists:</h2>
+  <ul>
+    <% @todo_lists.each do |todo_list| %>
+      <li><a href="#"><%= todo_list.name %></a></li>
+    <% end %>
+  </ul>
+  <%= render :partial => 'todo_lists/add_todo_list' %>
 </div>
