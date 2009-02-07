@@ -1,18 +1,20 @@
-<% content_for(:menu) do %>
+<div id="toDoLists">
   <ul>
     <% @todo_lists.each do |todo_list| %>
       <li><%= todo_list.name %>
     <% end %>
     <li id="add_todo_list"><%= link_to_remote('add list', :update => 'add_todo_list', :url => {:controller => 'todo_lists', :action => 'new'}) %></li>
   </ul>
-<% end %>
+</div>
 
-<ul>
-  <% if @todos.size == 0 %>
-    List empty!
-  <% else  %>
-    <% @todos.each do |todo| %>
-      <li><%= todo.title %></li>
+<div id="toDos">
+  <ul>
+    <% if @todos.size == 0 %>
+      List empty!
+    <% else  %>
+      <% @todos.each do |todo| %>
+        <li><%= todo.title %></li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+</div>
