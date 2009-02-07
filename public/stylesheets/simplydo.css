@@ -63,6 +63,19 @@ a {
   border-top: 1px solid #496500;
 }
 
+#listOptions {
+	padding: 0.8em 1.5em;
+	text-align: right;
+	font-size: 0.9em;
+	background-color: #ddd;
+	border-top: 1px solid #cecece;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+  
+}
+
 input#todo_title {
   font-size: 1.1em;
   padding: 0.2em;
