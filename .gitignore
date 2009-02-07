@@ -1,0 +1,5 @@
+nbproject
+vendor/rails
+config/database.yml
+log/*.log
+tmp/*
