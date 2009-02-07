@@ -48,13 +48,26 @@ a {
 
 #toDoLists ul {
 	list-style: none;
-	margin: 0px 0px 1em 0px;
+	margin: 0px;
 	padding: 0px;
 }
 
-#toDoLists ul a {
-	display: block;
-	padding: 0.3em 0px;
+#toDoLists li {
+	clear: left;
+}
+
+#toDoLists li a {
+	padding: 0.2em 0.4em;
+	margin-bottom: 0.3em;
+	float: left;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+#toDoLists li.current a, #toDoLists li.current a:hover {
+  background-color: #000;
+  color: #FFF;
+  text-decoration: none;
 }
 
 #toDoLists ul a:hover {
@@ -78,13 +91,17 @@ input#todo_list_name {
   	margin-right: 1em;
 }
 
+#add_todo_list {
+  clear: left;
+  margin-top: 1em;
+}
+
 #addListLink {
  	background-color: #0591ce;
  	padding: 0.3em 0.8em;
  	color: #FFF;
  	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
- 	 
 }
 
 .noToDos {
