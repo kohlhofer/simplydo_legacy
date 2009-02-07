@@ -13,15 +13,15 @@ ActiveRecord::Schema.define(:version => 20090207114731) do
 
   create_table "todo_lists", :force => true do |t|
     t.string   "name"
-    t.integer  "public"
+    t.integer  "public",     :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "todos", :force => true do |t|
-    t.integer  "todo_list_id"
-    t.integer  "user_id"
-    t.integer  "done"
+    t.integer  "todo_list_id", :limit => 11
+    t.integer  "user_id",      :limit => 11
+    t.integer  "done",         :limit => 11
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
