@@ -48,12 +48,13 @@ class TodosController < ApplicationController
   end
 
   def update_positions
+   logger.debug params[:openToDos].inspect
     params[:openToDos].each_index do |i|
-      item = Todo.find(params[:openToDos][i])
-      item.position = i
-      item.save
+      todo = Todo.find(params[:openToDos][i])
+      todo.position = i
+      todo.save
     end
-    @open_todos = Tods.find_by_list()
-    render :layout => false, :action => :list
+    #@open_todos = Tods.find_by_list()
+    render :nothing => true
   end
 end

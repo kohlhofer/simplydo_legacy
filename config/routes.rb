@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
 
 
+  map.todolist 'todos/update_positions', :controller => 'todos', :action => 'update_positions'
+
   map.resource :todos
   map.resources :todo_lists
   map.todolist 'todos/:todo_list', :controller => 'todos', :action => 'list'
