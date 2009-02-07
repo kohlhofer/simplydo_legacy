@@ -1,15 +1,8 @@
-<<<<<<< HEAD:app/views/todos/show.html.erb
-<div id="toDoLists">
-  <ul>
-    <% @todo_lists.each do |todo_list| %>
-      <li><%= todo_list.name %>
-    <% end %>
-    <%= render :partial => 'todo_lists/add_todo_list' %>
-  </ul>
-</div>
-=======
+
+
+
 <div id="listInterface">
->>>>>>> a75efbd3d77c1ecd36059ddbb0c32fc5b3986094:app/views/todos/show.html.erb
+
 
 
   <div id="toDos">
@@ -45,7 +38,7 @@
       <% @todo_lists.each do |todo_list| %>
         <li><%= todo_list.name %>
       <% end %>
-      <li id="add_todo_list"><%= link_to_remote('add list', :update => 'add_todo_list', :url => {:controller => 'todo_lists', :action => 'new'}) %></li>
+      <%= render :partial => 'todo_lists/add_todo_list' %>
     </ul>
   </div>
   
