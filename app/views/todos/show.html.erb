@@ -1,22 +1,21 @@
-
+<%= render :partial => 'todos/add' %>
 
 
 <div id="listInterface">
-  
+
   <div id="toDos">
-    
+
     <div id="openToDos">
       <% if @todos.size == 0 %>
-        <p class="noToDos">Yay! No open To-Dos.</p>
-      <% else  %>
-        <ul>
-          <% @todos.each do |todo| %>
-            <li><%= todo.title %></li>
-          <% end %>
-        </ul>
-      <% end %>
+        <p class="noToDos" id="noOpenToDos">Yay! No open To-Dos.</p>
+      <% end  %>
+      <ul>
+        <% @todos.each do |todo| %>
+          <%= render :partial => 'todos/todo' %>
+        <% end %>
+      </ul>
     </div>
-    
+
     <div id="closedToDos">
       <% if @todos.size == 0 %>
         <p class="noToDos">Nothing done yet :(</p>
@@ -33,5 +32,5 @@
   <%= render :partial => 'todo_lists/todo_lists' %>
 
   <div class="clearThis"> </div>
-  
+
 </div>
