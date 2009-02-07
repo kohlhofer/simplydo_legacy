@@ -1,10 +1,8 @@
-<%= render :partial => 'todos/add' %>
-
-
 <div id="listInterface">
 
   <div id="toDos">
     <h1><%= @page_title = @todo_list.name %></h1>
+    <%= render :partial => 'todos/add' %>
     <% if @todos.size == 0 %>
       <p class="noToDos" id="noOpenToDos">Yay! No open To-Dos.</p>
     <% end  %>
@@ -14,11 +12,11 @@
       <% end %>
     </ul>
     
-    <div id="closedToDos">
+    <div id="closedToDosContainer">
       <% if @todos.size == 0 %>
         <p class="noToDos">Nothing done yet :(</p>
       <% else  %>
-        <ul>
+        <ul id="closedToDos">
           <% @todos.each do |todo| %>
             <li><%= todo.title %></li>
           <% end %>

@@ -26,6 +26,8 @@ a {
 		margin-top:3em;
 		background-color:#EEE;
 		padding:10px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
 }
 
 #toDos {
@@ -38,8 +40,43 @@ a {
 #toDos h1 {
 	margin:0px;
 	font-size: 1.2em;
-	padding: 1em 1em 0.6em 1em;
-	background-color: #b2ce00;
+	padding: 1.2em 1.2em 0.8em 1.2em;
+	background-color: #78a700;
+	color: #FFF;
+		-moz-border-radius-topleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+}
+
+#toDos ul {
+	list-style: none;
+	margin: 0px;
+	padding:1em 0px;
+}
+
+#new_todo {
+  padding: 0.5em;
+  margin: 0px;
+  background-color: #fffaad;
+  border-bottom: 1px solid #f5e80e;
+  border-top: 1px solid #496500;
+}
+
+input#todo_title {
+  font-size: 1.1em;
+  padding: 0.2em;
+}
+
+
+#new_todo button {
+  font-size: 1.1em;
+  padding: 0.2em 0.4em;
+}
+
+#toDos li {
+	padding:0.5em 1em;
+	font-size: 1.2em;
 }
 
 
@@ -47,6 +84,7 @@ a {
 	float:left;
 	width:180px;
 	margin-left:20px;
+	padding-top: 2em;
 }
 
 #toDoLists h2 {
@@ -73,7 +111,7 @@ a {
 }
 
 #toDoLists li.current a, #toDoLists li.current a:hover {
-  background-color: #000;
+  background-color: #78a700;
   color: #FFF;
   text-decoration: none;
 }
@@ -114,15 +152,15 @@ input#todo_list_name {
 }
 
 .noToDos {
-	font-size:2em;
+	font-size:1.3em;
 	text-align:center;
-	padding:3m 0px;
+	padding:2.5em 0px;
 	font-weight:bold;
-	color:#CCC;
+	color:#DDD;
 }
 
-#closedToDos {
-	border-top:3px dashed #DDD;
+#closedToDosContainer {
+	border-top:1px dashed #DDD;
 }
 
 
