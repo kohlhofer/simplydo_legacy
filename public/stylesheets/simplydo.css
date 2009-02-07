@@ -9,7 +9,7 @@ body {
   font-size: 0.9em;
   margin:0px;
   padding:0px;
-  background-color: #DDD;
+  background-color: #EEE;
 }
 
 a {
@@ -25,16 +25,11 @@ a {
 #listInterface {
 		position:relative;
 		margin-top:3em;
-		background-color:#EEE;
-		padding:10px;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
 }
 
 #toDos {
 	float:left;
 	width:500px;
-	background-color:#FFF;
 }
 
 #toDos h1 {
@@ -43,16 +38,22 @@ a {
 	padding: 1.2em 1.2em 0.8em 1.2em;
 	background-color: #78a700;
 	color: #FFF;
-		-moz-border-radius-topleft: 3px;
-	-webkit-border-top-left-radius: 3px;
-	-moz-border-radius-topright: 3px;
-	-webkit-border-top-right-radius: 3px;
+		-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
 }
 
 #toDos ul {
 	list-style: none;
 	margin: 0px;
 	padding:1em 0px;
+	background-color: #FFF;
+
+}
+
+ul#openToDos {
+  	min-height: 150px;
 }
 
 #new_todo {
@@ -64,10 +65,14 @@ a {
 }
 
 #listOptions {
-	padding: 0.8em 0px 0px 0px;
+	padding: 0.5em 1em;
 	text-align: right;
 	font-size: 0.9em;
-  	background-color: #eee;
+	background-color: #FFF;
+			-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
 }
 
 input#todo_title {
@@ -84,6 +89,7 @@ input#todo_title {
 #toDos li {
 	padding:0.5em 1em;
 	font-size: 1.2em;
+	clear: left;
 }
 
 .tickBox {
@@ -175,7 +181,8 @@ input#todo_list_name {
 }
 
 #closedToDosContainer {
-	border-top:1px dashed #DDD;
+	border-top:2px dashed #DDD;
+  background-color: #FFF;
 }
 
 
