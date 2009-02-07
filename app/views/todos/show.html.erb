@@ -23,10 +23,12 @@
         </ul>
       <% end %>
     </div>
-    
+
+    <% unless @todo_list.nil? %>
     <div id="listOptions">
-      <a href="#">Delete this list?</a>
+      <%= link_to('Delete this list?', todo_lists_path(@todo_list), :method => 'delete') %>
     </div>
+    <% end %>
   </div>
 
   <%= render :partial => 'todo_lists/todo_lists' %>
