@@ -1,3 +1,5 @@
 # TODO Operate on the page object
-page.hide 'noOpenToDos'
+page.select('noOpenToDos').each do |e|
+  e.hide
+end
 page.insert_html :top, 'openToDos', :partial => 'todo', :object => @todo

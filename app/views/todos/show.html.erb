@@ -4,23 +4,23 @@
 <div id="listInterface">
 
   <div id="toDos">
-    <h1><%= @page_title = @todo_list.name %></h1>
-    <% if @todos.size == 0 %>
+    <h1><%= @page_title = @todo_list.name unless @todo_list.nil? %></h1>
+    <% if @open_todos.size == 0 %>
       <p class="noToDos" id="noOpenToDos">Yay! No open To-Dos.</p>
     <% end  %>
     <ul id="openToDos">
-      <% @todos.each do |todo| %>
-        <%= render :partial => 'todos/todo' %>
+      <% @open_todos.each do |todo| %>
+        <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
       <% end %>
     </ul>
     
     <div id="closedToDos">
-      <% if @todos.size == 0 %>
+      <% if @closed_todos.size == 0 %>
         <p class="noToDos">Nothing done yet :(</p>
       <% else  %>
         <ul>
-          <% @todos.each do |todo| %>
-            <li><%= todo.title %></li>
+          <% @closed_todos.each do |todo| %>
+            <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
           <% end %>
         </ul>
       <% end %>
