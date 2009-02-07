@@ -1,4 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title><%=h @page_title ? "#{@page_title} | SimplyDo.com" : "SimplyDo.com" %></title>
+	    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
-<%= yield :menu  %>
+		  <%= javascript_include_tag :defaults, :cache => true %>
+		  <%= stylesheet_link_tag "simplydo", :cache => true %>
+	</head>
 
-<%= yield %>
+	<body>
+    <%= yield :menu  %>
+    <%= yield %>
+	</body>
+</html>
