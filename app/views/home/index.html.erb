@@ -1,4 +1,9 @@
-<h1>Welcome to SimplyDo.com</h1>
-<p>Less management - more getting stuff done.</p>
-<p>Already registred? <a href="#">Sign in</a> (to be revealed with js).</p>
-<p>or <%= link_to('Start creating your first to-do list', :controller => 'todos') %></p>
+<div id="frontPage">
+  <div id="header">
+    <h1>SimplyDo.com</h1>
+  </div>
+  <p><%= @page_title = "Easy to use, everyday To-Do lists" %>.</p>
+  <p>Try it today - No sign up required!</p>
+  <p id="getStarted"><%= link_to('Create your first to-do list', :controller => 'todos') %></p>
+  <p>Already registered? <a href="#">Sign in here</a>.
+</div>
