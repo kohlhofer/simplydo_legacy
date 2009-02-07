@@ -5,6 +5,5 @@
       <li<%= (@todo_list.id == todo_list.id) ? ' class="current"' : '' %>><%= link_to(todo_list.name, todolist_path(todo_list)) %></li>
     <% end %>
   </ul>
-  <div class="clearThis"> </div>
   <%= render :partial => 'todo_lists/add_todo_list' %>
 </div>

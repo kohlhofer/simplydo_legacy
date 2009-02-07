@@ -32,6 +32,7 @@ a {
 	float:left;
 	width:500px;
 	background-color:#FFF;
+	min-height: 400px;
 }
 
 
@@ -93,7 +94,7 @@ input#todo_list_name {
 
 #add_todo_list {
   clear: left;
-  margin-top: 1em;
+  padding-top: 1em;
 }
 
 #addListLink {
@@ -102,6 +103,7 @@ input#todo_list_name {
  	color: #FFF;
  	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
+	font-weight: bold;
 }
 
 .noToDos {
