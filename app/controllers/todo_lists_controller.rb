@@ -24,6 +24,13 @@ class TodoListsController < ApplicationController
 
   def destroy
 
+    todo_list = TodoList.find(params[:id])
+
+    unless todo_list.destroy
+      
+    end
+
+    redirect_to :controller => 'todos'
   end
 
 end
