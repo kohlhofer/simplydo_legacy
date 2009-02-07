@@ -2,7 +2,7 @@ require 'app/controllers/application.rb'
 
 class TodosController < ApplicationController
 
-  layout 'application', :except => ['create']
+  layout 'application', :except => ['create', 'update_positions']
 
   def index
     show
@@ -47,4 +47,13 @@ class TodosController < ApplicationController
     @todo.update_attribute('done', 0)
   end
 
+  def update_positions
+    params[:openToDos].each_index do |i|
+      item = Todo.find(params[:openToDos][i])
+      item.position = i
+      item.save
+    end
+    @open_todos = Tods.find_by_list()
+    render :layout => false, :action => :list
+  end
 end

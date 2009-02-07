@@ -3,12 +3,13 @@
   <div id="toDos">
     <h1><%= @page_title = @todo_list.name unless @todo_list.nil? %></h1>
     <%= render :partial => 'todos/add' %>
-    <ul id="openToDos">
-      <% @open_todos.each do |todo| %>
-        <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
-      <% end %>
-    </ul>
     
+    <div id="openToDosList">
+    <%= render :partial => 'todos/open_todos' %>
+    </div>
+    
+    <%= sortable_element('openToDos', :update => 'openToDosList', :url => {:controller => :todos, :action => :update_positions}) %>
+
     <div id="closedToDosContainer">
         <ul id="closedToDos">
           <% @closed_todos.each do |todo| %>
