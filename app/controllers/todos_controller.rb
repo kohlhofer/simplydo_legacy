@@ -2,7 +2,7 @@ require 'app/controllers/application.rb'
 
 class TodosController < ApplicationController
 
-  layout 'application', :except => ['create', 'update_positions']
+  layout 'application', :except => ['create', 'destroy', 'update_positions']
 
   def index
     show
@@ -57,4 +57,13 @@ class TodosController < ApplicationController
     #@open_todos = Tods.find_by_list()
     render :nothing => true
   end
+
+  def destroy
+    todo = Todo.find(params[:id])
+    @id = todo.id
+    unless todo.destroy
+
+    end
+  end
+
 end

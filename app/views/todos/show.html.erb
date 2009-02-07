@@ -19,7 +19,7 @@
 
     <% unless @todo_list.nil? %>
     <div id="listOptions">
-      <%= link_to('Delete this list?', @todo_list, :method => :delete) %>
+      <%= link_to('Delete this list?', @todo_list, :method => :delete, :confirm => 'This will delete the list and all contained todos. Do you really want this to happen?') %>
     </div>
     <% end %>
   </div>

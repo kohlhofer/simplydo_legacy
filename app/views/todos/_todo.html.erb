@@ -5,4 +5,7 @@
     <%= check_box('done', todo.id, :class => "tickBox", :checked => 'checked', :onclick => remote_function( :url => { :action => "reopen", :id => todo.id })) %>
   <% end %>
   <p class="title"><%= todo.title %></p>
+  <% if todo.done == 1 %>
+    <%= link_to_remote('Delete this todo?', :url => tododestroy_url(todo.id)) %>
+  <% end %>
 </li>

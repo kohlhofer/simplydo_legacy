@@ -9,9 +9,11 @@ ActionController::Routing::Routes.draw do |map|
 
 
   map.todolist 'todos/update_positions', :controller => 'todos', :action => 'update_positions'
+  map.tododestroy 'todos/destroy/:id', :controller => 'todos', :action => 'destroy'
 
   map.resource :todos
   map.resources :todo_lists
+
   map.todolist 'todos/:todo_list', :controller => 'todos', :action => 'list'
 
   # The priority is based upon order of creation: first created -> highest priority.
