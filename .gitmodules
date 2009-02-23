@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/restful_authentication"]
+	path = vendor/plugins/restful_authentication
+	url = /home/steini/NetBeansProjects/restful_authentication/.git
