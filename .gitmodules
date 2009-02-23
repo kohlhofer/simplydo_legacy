@@ -1,6 +1,0 @@
-[submodule "vendor/plugins/restful_authentication"]
-	path = vendor/plugins/restful_authentication
-	url = /home/steini/NetBeansProjects/restful_authentication/.git
-[submodule "vendor/plugins/exception_notification"]
-	path = vendor/plugins/exception_notification
-	url = /home/steini/NetBeansProjects/restful_authentication/.git
