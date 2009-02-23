@@ -1,26 +1,34 @@
-<p id="navigation"><a href="/" id="logo">SimplyDo.com</a><a href="#">Your Lists</a> <a href="#">Your Account</a> <a href="#">Sign out</a></p>
+<p id="navigation">
+<a href="/" id="logo">SimplyDo.com</a>
+<a href="#">Your Lists</a>
+<a href="#">Your Account</a>
+<%- if logged_in? -%>
+  <%= link_to('Sign Out', logout_url) %>
+<%- else  -%>
+  <%= link_to('Login', login_url) %>
+<%- end -%>
 <div id="listInterface">
 
   <div id="toDos">
     <h1><%= @page_title = @todo_list.name unless @todo_list.nil? %></h1>
     <%= render :partial => 'todos/add' %>
-    
+
     <div id="openToDosList">
-    <%= render :partial => 'todos/open_todos' %>
+      <%= render :partial => 'todos/open_todos' %>
     </div>
 
     <div id="closedToDosContainer">
-        <ul id="closedToDos">
-          <% @closed_todos.each do |todo| %>
-            <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
-          <% end %>
-        </ul>
+      <ul id="closedToDos">
+        <% @closed_todos.each do |todo| %>
+          <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
+        <% end %>
+      </ul>
     </div>
 
     <% unless @todo_list.nil? %>
-    <div id="listOptions">
-      <%= link_to('Delete this list?', @todo_list, :method => :delete, :confirm => 'This will delete the list and all contained todos. Do you really want this to happen?') %>
-    </div>
+      <div id="listOptions">
+        <%= link_to('Delete this list?', @todo_list, :method => :delete, :confirm => 'This will delete the list and all contained todos. Do you really want this to happen?') %>
+      </div>
     <% end %>
   </div>
 
