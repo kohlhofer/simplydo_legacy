@@ -1,5 +1,3 @@
-require 'app/controllers/application.rb'
-
 class TodosController < ApplicationController
 
   layout 'application', :except => ['create', 'destroy', 'update_positions']
