@@ -11,10 +11,10 @@
 
   <div id="toDos">
     <h1><%= @page_title = @todo_list.name unless @todo_list.nil? %></h1>
-    <%= render :partial => 'todos/add' %>
+    <%= render :partial => 'todos/add', :locals => {:todo_lists => @todo_lists, :todo => @todo} %>
 
     <div id="openToDosList">
-      <%= render :partial => 'todos/open_todos' %>
+      <%= render :partial => 'todos/open_todos', :locals => {:open_todos => @open_todos} %>
     </div>
 
     <div id="closedToDosContainer">

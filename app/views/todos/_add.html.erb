@@ -1,7 +1,7 @@
-<% if !@todo_lists.nil? && @todo_lists.size > 0 %>
-  <% remote_form_for(@todo) do |f| %>
+<% if !todo_lists.nil? && todo_lists.size > 0 %>
+  <% remote_form_for(todo) do |f| %>
     <%= f.text_field('title') %>
-    <%= f.hidden_field(:todo_list_id, :value => @todo.todo_list.id) %>
+    <%= f.hidden_field(:todo_list_id, :value => todo.todo_list.id) %>
     <button value="submit" type="submit">Add to list</button>
   <% end %>
 <% end %>

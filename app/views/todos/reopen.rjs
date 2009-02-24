@@ -1,3 +1,5 @@
 page.remove "todo_#{@todo.id}"
 page.insert_html :top, 'openToDos', :partial => 'todo', :object => @todo
 page.visual_effect :highlight, "todo_#{@todo.id}", :duration => 1
+page.remove 'openToDos'
+page.insert_html :top, 'openToDosList', :partial => 'todos/open_todos', :object => @open_todos

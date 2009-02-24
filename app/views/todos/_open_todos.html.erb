@@ -1,7 +1,7 @@
 <ul id="openToDos">
-  <% @open_todos.each do |todo| %>
+  <% open_todos.each do |todo| %>
     <%= render :partial => 'todos/todo', :locals => {:todo => todo} %>
   <% end %>
 </ul>
 
-<%= sortable_element('openToDos', :url => {:controller => :todos, :action => :update_positions}) %>
+<%= sortable_element('openToDos', :url => {:controller => :todos, :action => :update_positions}, :handle => "todo") %>

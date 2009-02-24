@@ -1,4 +1,4 @@
-<li id="<%= "todo_#{todo.id}" %>"> 
+<li id="<%= "todo_#{todo.id}" %>" class="todo"> 
   <% if todo.done == 0 %>
     <%= check_box('done', todo.id, :class => "tickBox", :onclick => remote_function( :url => { :action => "close", :id => todo.id })) %>
   <% else %>

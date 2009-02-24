@@ -4,4 +4,4 @@
 
    has_many :todo, :dependent => :destroy
 
-end
+ end
