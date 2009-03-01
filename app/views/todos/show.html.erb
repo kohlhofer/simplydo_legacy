@@ -1,12 +1,3 @@
-<p id="navigation">
-<a href="/" id="logo">SimplyDo.com</a>
-<a href="#">Your Lists</a>
-<a href="#">Your Account</a>
-<%- if logged_in? -%>
-  <%= link_to('Sign Out', logout_url) %>
-<%- else  -%>
-  <%= link_to('Login', login_url) %>
-<%- end -%>
 <div id="listInterface">
 
   <div id="toDos">

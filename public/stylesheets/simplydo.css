@@ -51,7 +51,7 @@ a {
   text-align: right;
   background-color: #FFF;
   padding: 0.5em 0.8em;
-  margin: 0px;
+  margin: 0px 0px 1.5em 0px;
 			-moz-border-radius-bottomleft: 5px;
 	-webkit-border-bottom-left-radius: 5px;
 	-moz-border-radius-bottomright: 5px;
@@ -250,7 +250,7 @@ input#todo_list_name {
 
 #frontPage {
   background-color: #FFF;
-  margin: 2em 0px;
+  margin: 0px 0px 1em 0px;
   padding: 0px 0px 2em 0px;
   text-align: center;
   	-webkit-border-radius: 5px;
@@ -293,4 +293,87 @@ input#todo_list_name {
 	font-size: 1.2em;
 	  	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
+}
+
+#footer {
+	margin: 0px;
+	padding: -.5em 0px 2em 0px;
+	clear: both;
+	text-align: center;
+}
+
+#footer p {
+	margin: 0px 0px 0.2em 0px;
+	font-size: 0.9em;
+	color: #999;
+}
+
+
+
+
+
+
+
+
+#team {
+	background-color: #FFF;
+	padding: 1em 20px 1em 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#team h1 {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+div.teamMember {
+ 	margin: 0px 0px 6em 0px;
+}
+
+#team h2 {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 0px;
+}
+
+div.teamMemberProfile {
+  margin-left: 135px;
+}
+
+#team p {
+  font-size: 1.1em;
+  color: #666;
+  margin: 0.7em 0px;
+}
+
+#team ul {
+  list-style: none;
+  margin: 0.5em 0px 1em 0px;
+  padding: 0px;
+}
+
+#team li {
+  display: inline;
+  margin-right: 0.8em;
+  font-size: 1em;
+}
+
+#team ul a {
+  font-weight: bold;
+  text-decoration: underline;
+  }
+
+a.teamMemberPhoto {
+  	float: left;
+}
+
+#team .twitterLink {
+    background: transparent url(../images/twitter.png) no-repeat left top;
+    padding-left: 18px;
+}
+
+#team .homeLink {
+    background: transparent url(../images/house.png) no-repeat left top;
+    padding-left: 20px;
 }

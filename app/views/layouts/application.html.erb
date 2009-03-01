@@ -9,7 +9,23 @@
 
 	<body>
 	  <div id="wrap">
+	    <p id="navigation">
+        <a href="/" id="logo">SimplyDo.com</a>
+        <%- if logged_in? -%>
+          <a href="#">Your Lists</a>
+          <a href="#">Your Account</a>
+          <%= link_to('Sign Out', logout_url) %>
+        <%- else  -%>
+          <%= link_to('Login', login_url) %>
+        <%- end -%>
+      </p>
+      
       <%= yield %>
+      
+      <div id="footer">
+          <p>SimplyDo.com is a <%= link_to "Daniel Steiner / Alexander Kohlhofer", team_url %> co-production.</p>
+      </div>
+      
     </div>
     
     <style type='text/css'>@import url('http://s3.amazonaws.com/getsatisfaction.com/feedback/feedback.css');</style>
