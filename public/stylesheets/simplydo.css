@@ -25,9 +25,20 @@ a {
 
 }
 
+.page {
+	background-color: #FFF;
+	padding: 1em 20px 1em 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.page h1 {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
 #listInterface {
 		position:relative;
-		margin-top:3em;
 }
 
 #toDos {
@@ -296,7 +307,7 @@ input#todo_list_name {
 }
 
 #footer {
-	margin: 0px;
+	margin: 1em 0px;
 	padding: -.5em 0px 2em 0px;
 	clear: both;
 	text-align: center;
@@ -316,10 +327,7 @@ input#todo_list_name {
 
 
 #team {
-	background-color: #FFF;
-	padding: 1em 20px 1em 20px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+
 }
 
 #team h1 {
