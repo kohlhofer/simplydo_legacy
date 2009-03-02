@@ -19,9 +19,9 @@ class TodoListsController < ApplicationController
       if logged_in?
         @todo_list.user_id = current_user.id
       else
-        temp_id = TodoList.maximum('temp_id')
-        @todo_list.temp_id = (temp_id.nil?) ? 1 : temp_id
-        cookies[:temp_id] = @todo_list.temp_id
+        uuid =  `uuidgen`.strip
+        @todo_list.temp_id = uuid
+        cookies[:temp_id] = uuid
       end
 
       if @todo_list.save!
@@ -32,17 +32,11 @@ class TodoListsController < ApplicationController
     end
   end
 
-  # TODO check for list owner
   def destroy
-
     todo_list = TodoList.find(params[:id])
-
-    if todo_list.destroy
-
-    else
-
+    if (logged_in? && todo_list.user_id == current_user.id) || todo_list.temp_id == cookies[:temp_id]
+      todo_list.destroy
     end
-    
     redirect_to :controller => 'todos'
   end
 

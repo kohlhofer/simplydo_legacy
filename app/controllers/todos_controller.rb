@@ -16,6 +16,8 @@ class TodosController < ApplicationController
 
     @todo_lists = todo_lists()
 
+    @can_create_new_list = (cookies[:temp_id].nil? || (!cookies[:temp_id].nil? && @todo_lists.size == 0)) ? true : false
+
     if @todo_lists.size == 0
       @open_todos = []
       @closed_todos = []
@@ -70,21 +72,23 @@ class TodosController < ApplicationController
     
     params[:openToDos].each_index do |i|
       todo = Todo.find(params[:openToDos][i])
-      todo.position = i
-      todo.save
+
+      list = TodoList.find(todo.todo_list_id)
+
+      if (logged_in? && list.user_id == current_user.id) || cookies[:temp_id] == list.temp_id
+        todo.position = i
+        todo.save
+      end
     end
 
     render :nothing => true
   end
 
-  # TODO check for list owner
   def destroy
     todo = Todo.find(params[:id])
     check_list(todo.todo_list_id)
     @id = todo.id
-    unless todo.destroy
-
-    end
+    todo.destroy
   end
 
   protected
@@ -94,8 +98,6 @@ class TodosController < ApplicationController
 
     if logged_in?
       raise "accessing list which is not yours!" unless list.user_id == current_user.id
-    else
-      
     end
   end
 

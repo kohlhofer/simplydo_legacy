@@ -5,5 +5,7 @@
       <li<%= (@todo_list.id == todo_list.id) ? ' class="current"' : '' %>><%= link_to(todo_list.name, todolist_path(todo_list)) %></li>
     <% end %>
   </ul>
+  <%- if @can_create_new_list -%>
   <%= render :partial => 'todo_lists/add_todo_list' %>
+  <%- end -%>
 </div>
