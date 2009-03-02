@@ -30,5 +30,5 @@ config.action_view.cache_template_loading            = true
 config.after_initialize do
   ExceptionNotifier.exception_recipients = %w(steiniman@gmail.com)
   ExceptionNotifier.email_prefix = "[simplydo] "
-  ExceptionNotifier.sender_address = %("Application Error" <app.error@danielsteiner.de>)
+  ExceptionNotifier.sender_address = %("Application Error" <simplydo@h1356446.stratoserver.net>)
 end
